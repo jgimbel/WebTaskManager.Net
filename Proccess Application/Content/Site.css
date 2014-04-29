@@ -40,3 +40,20 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+
+.jumbotron ul {
+    list-style:none;
+}
+.jumbotron ul li div {
+    overflow:hidden;
+}
+
+.ui-tooltip{
+    background: #eee;
+	border: 1px solid #ccc;
+	padding: 10px;
+	border-radius: 8px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	position: relative;
+	width: 200px;
+}

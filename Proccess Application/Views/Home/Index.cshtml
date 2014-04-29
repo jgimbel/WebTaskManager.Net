@@ -4,17 +4,24 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-
-	@foreach (Process p in Model.processes) {
-	<a href="/kill/@p.Id">
-		<div title=" processid @p.Id machine @p.MachineName threads @p.Threads.Count ">@p.ProcessName</div>
-	</a>
-}
+<div class="jumbotron clearfix">
+    <ul>
+        @foreach (Process p in Model.processes)
+        {
+            <li class="col-sm-4">
+                <a href="/kill/@p.Id">
+                    <span class="col-xs-1">
+                        <i class="fa fa-wrench"></i>
+                    </span>
+                        <div class="col-xs-10"   title="processid @p.Id machine @p.MachineName threads @p.Threads.Count">@p.ProcessName</div>
+</a>
+            </li>
+        }
+    </ul>
 
 </div>
 <script>
-	$(function () {
-		$(document).tooltip();
-	});
+    $(function () {
+        $(document).tooltip();
+    });
 </script>
