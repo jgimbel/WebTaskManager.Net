@@ -13,11 +13,27 @@ namespace Proccess_Application
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+			routes.MapRoute(
+				"Process",
+				"Process/{process}",
+				new {
+					controller = "Process",
+					action = "Index",
+					process = UrlParameter.Optional
+				},
+				new {
+					process = @"\d+"
+				}
+			);
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+
+			ValueProviderFactories.Factories.Add(new JsonValueProviderFactory());
         }
     }
 }
