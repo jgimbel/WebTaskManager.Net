@@ -1,0 +1,20 @@
+﻿@model App.Models.Index.IndexModel
+@using System.Diagnostics;
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+
+	@foreach (Process p in Model.processes) {
+	<a href="/kill/@p.Id">
+		<div title=" processid @p.Id machine @p.MachineName threads @p.Threads.Count ">@p.ProcessName</div>
+	</a>
+}
+
+</div>
+<script>
+	$(function () {
+		$(document).tooltip();
+	});
+</script>
