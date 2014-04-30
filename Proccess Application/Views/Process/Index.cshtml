@@ -2,13 +2,16 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<div>@Model.BasePriority</div>
-<div>@Model.Id</div>
-<div>@Model.MainWindowTitle</div>
-<div>@Model.PagedMemorySize64</div>
-<div>@Model.ProcessName</div>
-<div>@Model.Responding</div>
-@*<div>@Model.StartTime.ToUniversalTime().ToString()</div>*@
-<div>@Model.Threads.Count</div>
-@*<div>@Model.TotalProcessorTime.ToString()</div>*@
+<div class="jumbotron clearfix">
+    <ul>
+        <li><label>Base Priority: &nbsp;</label>@Model.BasePriority</li>
+        <li><label>ID: &nbsp;</label>@Model.Id</li>
+        <li><label>Main Window Title: &nbsp;</label>@Model.MainWindowTitle</li>
+        <li><label>Paged Memory Size: &nbsp;</label>@Model.PagedMemorySize64</li>
+        <li><label>Process Name: &nbsp;</label>@Model.ProcessName</li>
+        <li><label>Responding: &nbsp;</label>@Model.Responding</li>
+        @*<div>@Model.StartTime.ToUniversalTime().ToString()</div>*@
+        <li><label>Threads: &nbsp;</label>@Model.Threads.Count</li>
+        @*<div>@Model.TotalProcessorTime.ToString()</div>*@
+    </ul>
+</div>

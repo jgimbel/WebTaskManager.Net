@@ -8,13 +8,11 @@
     <ul>
         @foreach (Process p in Model.processes)
         {
-            <li class="col-sm-4">
-                <a href="/Process/@p.Id">
-                    <span class="col-xs-1">
-                        <i class="fa fa-wrench"></i>
-                    </span>
-                        <div class="col-xs-10"   title="processid @p.Id machine @p.MachineName threads @p.Threads.Count">@p.ProcessName</div>
-</a>
+            <li class="col-md-6 col-lg-4 col-sm-12">
+                <a class="clearfix" href="/Process/@p.Id">
+                    <i class="fa fa-wrench col-xs-1"></i>
+                    <div class="col-xs-11" title="processid @p.Id machine @p.MachineName threads @p.Threads.Count">@p.ProcessName</div>
+                </a>
             </li>
         }
     </ul>
