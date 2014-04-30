@@ -19,8 +19,7 @@ namespace Proccess_Application.Controllers
 		public ActionResult Kill(int process = 0) {
 			Process p = Process.GetProcessById(process);
 			try {
-			
-			p.Kill();
+				p.Kill();
 			}
 			catch (Exception e) {
 				Console.WriteLine(e.Message);
